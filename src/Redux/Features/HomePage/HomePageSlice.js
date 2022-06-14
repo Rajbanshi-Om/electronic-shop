@@ -5,12 +5,21 @@ const initialState = {
 }
 
 export const HomePageSlice = createSlice({
-  name: 'counter',
+  name: 'homepage',
   initialState,
   reducers: {
       allValue: (state, action) => {
-        state.value = []
-        state.value.push(action.payload)
+      state.value = []
+      action.payload?.map((val, idx) => {
+        let priceData = parseInt(val.price.slice(1))
+        let mapData = {
+          ...val,
+          priceData,
+          id:idx+1
+        }
+        return state.value.push(mapData)
+      })
+        
     },
    
   },

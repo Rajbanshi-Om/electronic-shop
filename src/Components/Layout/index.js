@@ -1,11 +1,15 @@
 import { Outlet } from "react-router-dom";
 import HeaderComponent from "../Header";
+import RightDrawer from "../RightDrawer";
 
 const LayoutComponent = () => {
-    return ( 
+    return (
+        <>
+        <RightDrawer/>
         <HeaderComponent>
             <Outlet/>
         </HeaderComponent>
+        </>
      );
 }
  
