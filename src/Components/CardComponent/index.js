@@ -19,7 +19,7 @@ const CardComponent = (props) => {
     return ( 
         <Card sx={{ width:'100%' }}>
             <CardMedia
-                sx={{objectFit:'fill',height:{xs:120,sm:150,md:175 ,lg:194} }}
+                sx={{objectFit:'fill',height:{xs:130,sm:150,md:175 ,lg:194} }}
                 component="img"
                 // height={{}}
                 image={`https://electronic-ecommerce.herokuapp.com/${props?.val?.image}`}
